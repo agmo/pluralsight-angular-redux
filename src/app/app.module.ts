@@ -17,7 +17,7 @@ import { ToastComponent, ToastService } from './blocks/toast';
 import { SpinnerComponent, SpinnerService } from './blocks/spinner';
 import { ModalComponent, ModalService } from './blocks/modal';
 import { ExceptionService } from './blocks/exception.service';
-import { NgReduxModule, NgRedux } from 'ng2-redux';
+import { NgReduxModule, NgRedux } from '@angular-redux/store';
 import { store, IAppState } from './store';
 import { CourseActions } from './courses/course.actions';
 

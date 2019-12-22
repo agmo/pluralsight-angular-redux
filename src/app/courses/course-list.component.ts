@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CourseService } from './course.service';
 import { Course } from './course';
-import { FilterTextComponent } from '../blocks/filter-text';
 import { IAppState } from '../store';
-import { NgRedux, select } from 'ng2-redux';
+import { NgRedux, select } from '@angular-redux/store';
 import { Observable } from 'rxjs/Observable';
 import { CourseActions } from './course.actions';
 
