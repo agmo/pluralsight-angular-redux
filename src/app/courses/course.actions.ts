@@ -23,7 +23,7 @@ export class CourseActions {
         });
     }
 
-    filterCourses(searchText:string) {
+    filterCourses(searchText: string) {
         this.ngRedux.dispatch({
             type: FILTER_COURSES,
             searchText,

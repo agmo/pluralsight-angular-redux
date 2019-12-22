@@ -13,7 +13,7 @@ import { CourseActions } from './course.actions';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
-  @select('filteredCourses') filteredCourses$: Observable<Course>
+  @select('filteredCourses') filteredCourses$: Observable<Course>;
 
   constructor(
     private ngRedux: NgRedux<IAppState>,

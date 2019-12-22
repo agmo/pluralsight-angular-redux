@@ -5,7 +5,7 @@ import { FilterTextComponent } from './filter-text.component';
 
 describe('Component: FilterText', () => {
   it('should create an instance', () => {
-    let component = new FilterTextComponent();
+    const component = new FilterTextComponent();
     expect(component).toBeTruthy();
   });
 });

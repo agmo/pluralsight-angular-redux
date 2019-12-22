@@ -13,21 +13,21 @@ export class InMemoryStoryService implements InMemoryDbService {
   * Safe for consuming service to morph arrays and objects.
   */
   createDb() {
-    let courses = [
+    const courses = [
       {
-        "id": 1,
-        "name": "Building Apps with React",
-        "topic": "ReactJS"
+        'id': 1,
+        'name': 'Building Apps with React',
+        'topic': 'ReactJS'
       },
       {
-        "id": 2,
-        "name": "Building Apps with Angular",
-        "topic": "AngularJS"
+        'id': 2,
+        'name': 'Building Apps with Angular',
+        'topic': 'AngularJS'
       },
       {
-        "id":3,
-        "name": "Building Apps with Angular and Redux",
-        "topic": "Angular and Redux"
+        'id': 3,
+        'name': 'Building Apps with Angular and Redux',
+        'topic': 'Angular and Redux'
       }
     ];
 

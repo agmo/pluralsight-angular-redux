@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs/Rx';
 
 export interface ISpinnerState {
-  show: boolean
+  show: boolean;
 }
 
 @Injectable()
@@ -18,4 +18,4 @@ export class SpinnerService {
   hide() {
     this._spinnerSubject.next(<ISpinnerState>{ show: false });
   }
-} 
+}

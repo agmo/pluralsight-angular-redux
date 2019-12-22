@@ -37,7 +37,7 @@ private _defaults = {
     this.okText = this._defaults.okText;
     this.cancelText = this._defaults.cancelText;
 
-    let promise = new Promise<boolean>((resolve, reject) => {
+    const promise = new Promise<boolean>((resolve, reject) => {
       this.negativeOnClick = (e: any) => resolve(false);
       this.positiveOnClick = (e: any) => resolve(true);
       this._show();
@@ -62,12 +62,12 @@ private _defaults = {
 
     this._cancelButton.onclick = ((e: any) => {
       e.preventDefault();
-      if (!this.negativeOnClick(e)) this._hideDialog()
+      if (!this.negativeOnClick(e)) this._hideDialog();
     });
 
     this._okButton.onclick = ((e: any) => {
       e.preventDefault();
-      if (!this.positiveOnClick(e)) this._hideDialog()
+      if (!this.positiveOnClick(e)) this._hideDialog();
     });
 
     this._modalElement.onclick = () => {
@@ -76,7 +76,7 @@ private _defaults = {
     };
 
     document.onkeyup = (e: any) => {
-      if (e.which == KEY_ESC) {
+      if (e.which === KEY_ESC) {
         this._hideDialog();
         return this.negativeOnClick(null);
       }

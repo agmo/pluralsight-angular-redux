@@ -1,4 +1,3 @@
-import { Course } from '../courses/course';
 import { IAppState } from './IAppState';
 import { FILTER_COURSES, REQUEST_COURSES_SUCCESS } from '../courses/course.actions';
 
@@ -9,7 +8,7 @@ const initialState: IAppState = {
     filteredCourses: courses
 };
 
-function filterCourses(state, action) : IAppState {
+function filterCourses(state, action): IAppState {
   return Object.assign({}, state, {
     filteredCourses: state.courses.filter(c => {
       return c.name.toLowerCase().indexOf(action.searchText.toLowerCase()) > -1;
@@ -17,7 +16,7 @@ function filterCourses(state, action) : IAppState {
   });
 }
 
-function storeCourses(state, action) : IAppState {
+function storeCourses(state, action): IAppState {
   return Object.assign({}, state, {
     courses: action.courses,
     filteredCourses: action.courses,
@@ -25,7 +24,7 @@ function storeCourses(state, action) : IAppState {
 }
 
 export function reducer(state= initialState, action) {
-    switch(action.type) {
+    switch (action.type) {
       case FILTER_COURSES:
         return filterCourses(state, action);
       case REQUEST_COURSES_SUCCESS:

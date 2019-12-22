@@ -3,7 +3,7 @@ import { reducer } from './reducer';
 import { IAppState } from './IAppState';
 import freezeState from './freezeState';
 
-declare var window:any;
+declare var window: any;
 
 const devToolsExtension: GenericStoreEnhancer = (window.devToolsExtension)
     ? window.devToolsExtension() : (f) => f;

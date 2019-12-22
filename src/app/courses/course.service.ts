@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { CONFIG } from '../shared';
-import {Observable} from 'rxjs/Rx';
 import '../rxjs-operators';
 import { Course } from './course';
 import { SpinnerService } from '../blocks/spinner';
 import { ExceptionService } from '../blocks/exception.service';
 
-// import { /* ExceptionService, */ SpinnerService } from '../blocks/blocks';
-// import { CONFIG, MessageService } from '../shared/shared';
-
-
-let coursesUrl = CONFIG.baseUrls.courses;
+const coursesUrl = CONFIG.baseUrls.courses;
 
 
 @Injectable()
@@ -23,7 +18,7 @@ export class CourseService {
   ) { }
 
   addCourse(course: Course) {
-    let body = JSON.stringify(course);
+    const body = JSON.stringify(course);
     this._spinnerService.show();
     return this._http
       .post(`${coursesUrl}`, body)
@@ -59,7 +54,7 @@ export class CourseService {
 
 
   updateCourse(course: Course) {
-    let body = JSON.stringify(course);
+    const body = JSON.stringify(course);
     this._spinnerService.show();
 
     return this._http

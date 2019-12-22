@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastService } from './toast.service'
+import { ToastService } from './toast.service';
 
 @Component({
   selector: 'toast',
@@ -23,7 +23,7 @@ export class ToastComponent implements OnInit {
     this.title = title;
     this.message = message;
     this._show();
-  }  
+  }
 
 
   private _show() {
@@ -37,7 +37,7 @@ export class ToastComponent implements OnInit {
   private _hide() {
     this._toastElement.style.opacity = 0;
     window.setTimeout(() => this._toastElement.style.zIndex = 0, 400);
-  }  
+  }
 
   ngOnInit() {
     this._toastElement = document.getElementById('toast');

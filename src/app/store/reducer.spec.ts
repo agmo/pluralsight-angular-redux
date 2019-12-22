@@ -12,19 +12,19 @@ describe('Reducer', () => {
   describe('filterCourses', () => {
     const courses = [
       {
-        "id": 1,
-        "name": "Building Apps with React",
-        "topic": "ReactJS"
+        'id': 1,
+        'name': 'Building Apps with React',
+        'topic': 'ReactJS'
       },
       {
-        "id": 2,
-        "name": "Building Apps with Angular",
-        "topic": "AngularJS"
+        'id': 2,
+        'name': 'Building Apps with Angular',
+        'topic': 'AngularJS'
       },
       {
-        "id":3,
-        "name": "Building Apps with Angular and Redux",
-        "topic": "Angular and Redux"
+        'id': 3,
+        'name': 'Building Apps with Angular and Redux',
+        'topic': 'Angular and Redux'
       }
     ];
 
@@ -60,4 +60,4 @@ describe('Reducer', () => {
       expect(matchedCourse.id).toBe(3);
     });
   });
-})
+});

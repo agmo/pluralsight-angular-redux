@@ -22,7 +22,7 @@ export class CourseComponent implements OnInit, AfterContentChecked {
 
   private _getCourse() {
 
-    let id = +this._route.snapshot.params['id'];
+    const id = +this._route.snapshot.params['id'];
     if (id === 0) return;
     if (this.isAddMode()) {
       this.course = <Course>{ name: '', topic: 'Web' };
@@ -57,7 +57,7 @@ export class CourseComponent implements OnInit, AfterContentChecked {
   }
 
   save() {
-    let course = this.course;
+    const course = this.course;
     if (course.id == null) {
       this._courseService.addCourse(this.editCourse)
         .subscribe(char => {
@@ -75,7 +75,7 @@ export class CourseComponent implements OnInit, AfterContentChecked {
   }
 
   delete() {
-    let msg = `Do you want to delete ${this.course.name}?`;
+    const msg = `Do you want to delete ${this.course.name}?`;
     this._modalService.activate(msg).then(responseOK => {
       if (responseOK) {
         this.cancel(false);

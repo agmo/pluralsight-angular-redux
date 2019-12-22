@@ -3,4 +3,4 @@ export let CONFIG = {
     config: 'commands/config',
     courses: 'api/courses.json',
   }
-}
+};
